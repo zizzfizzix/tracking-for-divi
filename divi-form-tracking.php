@@ -25,7 +25,7 @@ use Kucrut\Vite;
 /**
  * Main function to avoid global variables
  */
-function add_divi_form_tracking_code() {
+function add_divi_form_tracking_code(): void {
 	$theme = wp_get_theme();
 
 	if ( 'Divi' === $theme->name || 'Divi' === $theme->parent_theme ) {
