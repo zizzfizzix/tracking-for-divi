@@ -1,5 +1,5 @@
 // Based on https://gist.github.com/Maximoo/e42c0ac114d12873ab511b7a097e669e
-import { findKeyInObject } from "./lib/findKeyInObject";
+import { findKeyInObject, findFormId } from "./lib";
 
 // TODO: get this from plugin settings with a default
 const dataLayerVar = "dataLayer";
@@ -22,6 +22,7 @@ jQuery(document).on("ajaxSuccess", (_event, xhr, req, data) => {
 
     window[dataLayerVar].push({
       event: "contact_form_submit",
+      formId: findFormId(findKeyInObject(reqData, "et_pb_contactform")),
       formData: {
         name: reqData[findKeyInObject(reqData, "et_pb_contact_name")],
         email: reqData[findKeyInObject(reqData, "et_pb_contact_email")],
