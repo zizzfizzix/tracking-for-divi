@@ -4,10 +4,6 @@ import { findKeyInObject } from "./lib/findKeyInObject";
 // TODO: get this from plugin settings with a default
 const dataLayerVar = "dataLayer";
 
-interface Window {
-  [dataLayerVar]: any[];
-}
-
 jQuery(document).on("ajaxSuccess", (_event, xhr, req, data) => {
   const reqData = Object.fromEntries(new URLSearchParams(req.data));
 
