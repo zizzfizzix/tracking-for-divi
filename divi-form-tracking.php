@@ -1,5 +1,11 @@
 <?php
 /**
+ * WordPress plugin to send tracking events on successful Divi form submission.
+ *
+ * @package         diviformtracking
+ * @license         Apache-2.0
+ * @author          Kuba Serafinowski
+ *
  * Plugin Name:     Divi Form Tracking
  * Plugin URI:      https://kuba.wtf/
  * Description:     Track only successful Divi contact form submits through the dataLayer.
@@ -8,25 +14,35 @@
  * Text Domain:     divi-form-tracking
  * Domain Path:     /languages
  * Version:         0.1.0
- *
- * @package         Divi_Form_Tracking
  */
+
+namespace DigitallStudio\DiviFormTracking;
 
 require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
-$theme = wp_get_theme();
-
 use Kucrut\Vite;
 
-if ($theme->name == 'Divi' || $theme->parent_theme == 'Divi') {
-  add_action( 'wp_enqueue_scripts', function (): void {
-    Vite\enqueue_asset(
-      __DIR__ . '/js/dist',
-      'js/src/main.ts',
-      [
-        'handle' => 'divi-form-tracking',
-        'in-footer' => true,
-      ]
-    );
-  });
+/**
+ * Main function to avoid global variables
+ */
+function add_divi_form_tracking_code() {
+	$theme = wp_get_theme();
+
+	if ( 'Divi' === $theme->name || 'Divi' === $theme->parent_theme ) {
+		add_action(
+			'wp_enqueue_scripts',
+			function (): void {
+				Vite\enqueue_asset(
+					__DIR__ . '/js/dist',
+					'js/src/main.ts',
+					array(
+						'handle'    => 'divi-form-tracking',
+						'in-footer' => true,
+					)
+				);
+			}
+		);
+	}
 }
+
+add_divi_form_tracking_code();
