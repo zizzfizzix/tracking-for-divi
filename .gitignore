@@ -11,3 +11,4 @@ js/dist/
 vendor/
 wp/
 build_logs/
+*.swp
