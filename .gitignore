@@ -9,3 +9,5 @@ node_modules/
 *.zip
 js/dist/
 vendor/
+wp/
+build_logs/
