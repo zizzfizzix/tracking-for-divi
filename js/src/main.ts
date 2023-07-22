@@ -1,4 +1,4 @@
-// Based on https://gist.github.com/Maximoo/e42c0ac114d12873ab511b7a097e669e
+// Inspired by https://gist.github.com/Maximoo/e42c0ac114d12873ab511b7a097e669e
 import { findKeyInObject, findFormId } from "./lib";
 
 // TODO: get this from plugin settings with a default

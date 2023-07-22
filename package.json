@@ -1,8 +1,8 @@
 {
-  "name": "divi-form-tracking",
+  "name": "tracking-for-divi",
   "description": "Track only successful Divi contact form submits through the dataLayer.",
   "version": "0.1.0",
-  "main": "Gruntfile.js",
+  "main": "./js/src/main.ts",
   "author": "Kuba Serafinowski",
   "license": "Apache-2.0",
   "scripts": {

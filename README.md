@@ -1,4 +1,4 @@
-# Divi Form Tracking
+# Tracking for Divi
 
 **Contributors:** kubawtf  
 **Tags:** divi, dataLayer, tracking, tag manager  

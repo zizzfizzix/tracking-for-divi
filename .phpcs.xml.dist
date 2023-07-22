@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Coding Standards based ruleset for divi-form-tracking"><!--
+<ruleset name="WordPress Coding Standards based ruleset for tracking-for-divi"><!--
   Prevent errors caused by WordPress Coding Standards not supporting PHP 8.0+.
   See https://github.com/WordPress/WordPress-Coding-Standards/issues/2035#issuecomment-1325532520
   -->
@@ -38,7 +38,7 @@
   <rule ref="WordPress" />
   <rule ref="WordPress.NamingConventions.PrefixAllGlobals">
     <properties>
-      <property name="prefixes" type="array" value="digitallstudio\diviformtracking" />
+      <property name="prefixes" type="array" value="digitallstudio\trackingfordivi" />
     </properties>
   </rule>
   <rule ref="WordPress.WhiteSpace.ControlStructureSpacing">

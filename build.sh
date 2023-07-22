@@ -6,8 +6,8 @@ mkdir -p ./build_logs
 exec > >(tee "./build_logs/build.$(date +%Y-%m-%d-%H-%M-%S).log") 2>&1
 
 package() {
-  if [[ -e ./divi-form-tracking.zip ]]; then
-    rm ./divi-form-tracking.zip
+  if [[ -e ./tracking-for-divi.zip ]]; then
+    rm ./tracking-for-divi.zip
   fi
 
   case $1 in
@@ -27,7 +27,7 @@ package() {
 
   case $1 in
     production)
-      zip -r divi-form-tracking/divi-form-tracking.zip ./divi-form-tracking/ \
+      zip -r tracking-for-divi/tracking-for-divi.zip ./tracking-for-divi/ \
         -x "*/.*" \
         -x "**/*.zip" \
         -x "*/docker/*" \
@@ -41,7 +41,7 @@ package() {
         -x "*/package*.json"
     ;;
     develop)
-      zip -r divi-form-tracking/divi-form-tracking.zip ./divi-form-tracking/ \
+      zip -r tracking-for-divi/tracking-for-divi.zip ./tracking-for-divi/ \
         -x "*/.*" \
         -x "**/*.zip" \
         -x "*/docker/*" \
@@ -71,12 +71,12 @@ deploy() {
 
   mkdir -p ./wp
 
-  unzip -d ./wp/ ./divi-form-tracking.zip
+  unzip -d ./wp/ ./tracking-for-divi.zip
 
-  cp -R ./wp/divi-form-tracking "./wp/wp-content/plugins/"
+  cp -R ./wp/tracking-for-divi "./wp/wp-content/plugins/"
 
-  rm -r ./wp/divi-form-tracking
-  rm ./divi-form-tracking.zip
+  rm -r ./wp/tracking-for-divi
+  rm ./tracking-for-divi.zip
 }
 
 case $1 in
