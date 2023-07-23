@@ -36,8 +36,9 @@ function add_divi_form_tracking_script(): void {
 					__DIR__ . '/js/dist',
 					'js/src/main.ts',
 					array(
-						'handle'    => 'tracking-for-divi',
-						'in-footer' => true,
+						'handle'       => 'tracking-for-divi',
+						'dependencies' => array( 'jquery' ),
+						'in-footer'    => true,
 					)
 				);
 			}
