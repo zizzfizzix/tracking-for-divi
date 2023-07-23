@@ -5,8 +5,8 @@
 **Requires at least:** 4.7  
 **Tested up to:** 6.2.2  
 **Requires PHP:** 7.1  
-**Stable tag:** 0.1.0  
-**License:** Apache 2.0    
+**Stable tag:** 0.1.1  
+**License:** Apache 2.0  
 **License URI:** <https://www.apache.org/licenses/LICENSE-2.0>
 
 If you want to track your completed form submissions using the Divi theme look no further.
@@ -56,6 +56,10 @@ No, not right now. This plugin only supports a variable named `dataLayer`, howev
 ## Screenshots
 
 ## Changelog
+
+### 0.1.1
+
+- Fixed a rename omission that broke the plugin.
 
 ### 0.1.0
 
