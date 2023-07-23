@@ -1,23 +1,25 @@
 #!/bin/bash
 set -e
 
+pkgname=tracking-for-divi
+
 # Redirect all output to a log file
 mkdir -p ./build_logs
 exec > >(tee "./build_logs/build.$(date +%Y-%m-%d-%H-%M-%S).log") 2>&1
 
 package() {
-  if [[ -e ./tracking-for-divi.zip ]]; then
-    rm ./tracking-for-divi.zip
+  if [[ -e ./${pkgname}.zip ]]; then
+    rm ./${pkgname}.zip
   fi
 
   case $1 in
-    production)
-      composer install --no-dev
-      composer dump-autoload -o --no-dev
+  production)
+    composer install --no-dev
+    composer dump-autoload -o --no-dev
     ;;
-    develop)
-      composer install
-      composer dump-autoload -o
+  develop)
+    composer install
+    composer dump-autoload -o
     ;;
   esac
 
@@ -26,31 +28,31 @@ package() {
   pushd ..
 
   case $1 in
-    production)
-      zip -r tracking-for-divi/tracking-for-divi.zip ./tracking-for-divi/ \
-        -x "*/.*" \
-        -x "**/*.zip" \
-        -x "*/docker/*" \
-        -x "*/build_logs/*" \
-        -x "*/*.sh" \
-        -x "*/node_modules/*" \
-        -x "*/js/src/*" \
-        -x "*/Gruntfile.js" \
-        -x "*/vite.config.js" \
-        -x "*/package*.json"
+  production)
+    zip -r ${pkgname}/${pkgname}.zip ./${pkgname}/ \
+      -x "*/.*" \
+      -x "**/*.zip" \
+      -x "*/docker/*" \
+      -x "*/build_logs/*" \
+      -x "*/*.sh" \
+      -x "*/node_modules/*" \
+      -x "*/js/src/*" \
+      -x "*/Gruntfile.js" \
+      -x "*/vite.config.js" \
+      -x "*/package*.json"
     ;;
-    develop)
-      zip -r tracking-for-divi/tracking-for-divi.zip ./tracking-for-divi/ \
-        -x "*/.*" \
-        -x "**/*.zip" \
-        -x "*/docker/*" \
-        -x "*/build_logs/*" \
-        -x "*/*.sh" \
-        -x "*/node_modules/*" \
-        -x "*/js/src/*" \
-        -x "*/Gruntfile.js" \
-        -x "*/vite.config.js" \
-        -x "*/package*.json"
+  develop)
+    zip -r ${pkgname}/${pkgname}.zip ./${pkgname}/ \
+      -x "*/.*" \
+      -x "**/*.zip" \
+      -x "*/docker/*" \
+      -x "*/build_logs/*" \
+      -x "*/*.sh" \
+      -x "*/node_modules/*" \
+      -x "*/js/src/*" \
+      -x "*/Gruntfile.js" \
+      -x "*/vite.config.js" \
+      -x "*/package*.json"
     ;;
   esac
 
@@ -59,44 +61,46 @@ package() {
 
 deploy() {
   case $1 in
-    production)
-      package production
+  production)
+    package production
     ;;
-    develop)
-      package develop
+  develop)
+    package develop
     ;;
   esac
 
-  mkdir -p ./docker/data
+  docker_data_dir=./docker/data
 
-  unzip -d ./docker/data/ ./tracking-for-divi.zip
+  mkdir -p ${docker_data_dir}
 
-  cp -R ./docker/data/tracking-for-divi "./docker/data/wp-content/plugins/"
+  unzip -d ${docker_data_dir}/ ./${pkgname}.zip
 
-  rm -r ./docker/data/tracking-for-divi
-  rm ./tracking-for-divi.zip
+  cp -R ${docker_data_dir}/${pkgname} ${docker_data_dir}/wp-content/plugins/
+
+  rm -r ${docker_data_dir}/${pkgname}
+  rm ./${pkgname}.zip
 }
 
 case $1 in
 
-  package-production)
-    package production
+package-production)
+  package production
   ;;
 
-  package-develop)
-    package develop
+package-develop)
+  package develop
   ;;
 
-  deploy-production)
-    deploy production
+deploy-production)
+  deploy production
   ;;
 
-  deploy-develop)
-    deploy develop
+deploy-develop)
+  deploy develop
   ;;
 
-  *)
-    echo Use package-production, package-develop, deploy-production or deploy-develop as an argument.
+*)
+  echo Use package-production, package-develop, deploy-production or deploy-develop as an argument.
   ;;
 
 esac

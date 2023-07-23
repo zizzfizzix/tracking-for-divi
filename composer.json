@@ -1,5 +1,5 @@
 {
-  "name": "digitallstudio/tracking-for-divi",
+  "name": "digitallstudio/trackingfordivi",
   "description": "Track only successful Divi contact form submits through the dataLayer.",
   "type": "wordpress-plugin",
   "require": {

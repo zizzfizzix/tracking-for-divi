@@ -2,7 +2,7 @@
 /**
  * WordPress plugin to send tracking events on successful Divi form submission.
  *
- * @package         trackingfordivi
+ * @package         tracking-for-divi
  * @license         Apache-2.0
  * @author          Kuba Serafinowski
  *
