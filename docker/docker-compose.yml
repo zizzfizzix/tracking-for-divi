@@ -1,5 +1,6 @@
 version: '3.3'
 
+name: wp-tracking-for-divi
 services:
   db:
     image: docker.io/bitnami/mariadb:10.3-debian-10
@@ -15,7 +16,7 @@ services:
     - db
     image: automattic/wordpress-xdebug
     volumes:
-    - ./wp:/var/www/html
+    - ./data:/var/www/html
     ports:
     - 8080:80
     restart: on-failure

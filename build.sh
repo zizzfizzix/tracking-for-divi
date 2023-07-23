@@ -31,7 +31,6 @@ package() {
         -x "*/.*" \
         -x "**/*.zip" \
         -x "*/docker/*" \
-        -x "*/wp/*" \
         -x "*/build_logs/*" \
         -x "*/*.sh" \
         -x "*/node_modules/*" \
@@ -45,7 +44,6 @@ package() {
         -x "*/.*" \
         -x "**/*.zip" \
         -x "*/docker/*" \
-        -x "*/wp/*" \
         -x "*/build_logs/*" \
         -x "*/*.sh" \
         -x "*/node_modules/*" \
@@ -69,13 +67,13 @@ deploy() {
     ;;
   esac
 
-  mkdir -p ./wp
+  mkdir -p ./docker/data
 
-  unzip -d ./wp/ ./tracking-for-divi.zip
+  unzip -d ./docker/data/ ./tracking-for-divi.zip
 
-  cp -R ./wp/tracking-for-divi "./wp/wp-content/plugins/"
+  cp -R ./docker/data/tracking-for-divi "./docker/data/wp-content/plugins/"
 
-  rm -r ./wp/tracking-for-divi
+  rm -r ./docker/data/tracking-for-divi
   rm ./tracking-for-divi.zip
 }
 

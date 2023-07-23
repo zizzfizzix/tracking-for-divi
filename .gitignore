@@ -9,6 +9,6 @@ node_modules/
 *.zip
 js/dist/
 vendor/
-wp/
+docker/data/
 build_logs/
 *.swp

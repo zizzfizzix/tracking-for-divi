@@ -7,7 +7,7 @@
       "request": "launch",
       "port": 9000,
       "pathMappings": {
-        "/var/www/html": "${workspaceRoot}/wp",
+        "/var/www/html": "${workspaceRoot}/docker/data",
         "/var/www/html/wp-content/plugins/tracking-for-divi": "${workspaceRoot}",
       }
     }
