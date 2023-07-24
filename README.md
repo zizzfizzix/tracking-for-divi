@@ -2,9 +2,9 @@
 
 **Contributors:** kubawtf  
 **Tags:** divi, dataLayer, tracking, tag manager  
-**Requires at least:** 4.7  
+**Requires at least:** 5.3  
 **Tested up to:** 6.2.2  
-**Requires PHP:** 7.1  
+**Requires PHP:** 7.4  
 **Stable tag:** 0.1.1  
 **License:** Apache 2.0  
 **License URI:** <https://www.apache.org/licenses/LICENSE-2.0>

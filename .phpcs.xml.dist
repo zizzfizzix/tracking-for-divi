@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Coding Standards based ruleset for tracking-for-divi"><!--
+<ruleset name="WordPress Coding Standards based ruleset for tracking-for-divi">
+  <!--
   Prevent errors caused by WordPress Coding Standards not supporting PHP 8.0+.
   See https://github.com/WordPress/WordPress-Coding-Standards/issues/2035#issuecomment-1325532520
   -->
@@ -26,7 +27,7 @@
   <!-- Rules: Check PHP version compatibility -->
   <!--
   https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions -->
-  <config name="testVersion" value="7.1-" />
+  <config name="testVersion" value="7.4-" />
   <!-- https://github.com/PHPCompatibility/PHPCompatibilityWP -->
   <rule ref="PHPCompatibilityWP" />
 
