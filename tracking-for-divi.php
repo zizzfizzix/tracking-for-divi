@@ -13,7 +13,7 @@
  * Author URI:      https://kuba.wtf/
  * Text Domain:     tracking-for-divi
  * Domain Path:     /languages
- * Version:         0.1.1
+ * Version:         0.2.0
  */
 
 namespace DigitallStudio\TrackingForDivi;
