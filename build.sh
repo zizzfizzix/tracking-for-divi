@@ -25,6 +25,9 @@ package() {
 
   npm install
   npm run build
+
+  wp i18n make-mo ./languages
+
   pushd ..
 
   case $1 in
@@ -41,7 +44,7 @@ package() {
       -x "*/Gruntfile.js" \
       -x "*/vite.config.js" \
       -x "*/package*.json" \
-      -x "*/languages/*.po*"
+      -x "*/languages/*.po"
     ;;
   develop)
     zip -r ${pkgname}/${pkgname}.zip ./${pkgname}/ \
