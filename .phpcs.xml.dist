@@ -47,4 +47,8 @@
       <property name="blank_line_check" value="true" />
     </properties>
   </rule>
+  <rule ref="WordPress-Core">
+    <!-- For compatibility with PSR-4 -->
+    <exclude name="WordPress.Files.FileName" />
+  </rule>
 </ruleset>

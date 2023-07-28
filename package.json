@@ -2,7 +2,7 @@
   "name": "tracking-for-divi",
   "description": "Track only successful Divi contact form submits through the dataLayer.",
   "version": "0.1.1",
-  "main": "./js/src/main.ts",
+  "main": "./js/client/main.ts",
   "author": "Kuba Serafinowski",
   "license": "Apache-2.0",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@kucrut/vite-for-wp": "^0.5.2",
+    "@types/gtag.js": "^0.0.12",
     "@types/jquery": "^3.5.16",
     "vite": "^4.4.6"
   }

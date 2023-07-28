@@ -36,7 +36,8 @@ package() {
       -x "*/build_logs/*" \
       -x "*/*.sh" \
       -x "*/node_modules/*" \
-      -x "*/js/src/*" \
+      -x "*/js/client/*" \
+      -x "*/js/admin/*" \
       -x "*/Gruntfile.js" \
       -x "*/vite.config.js" \
       -x "*/package*.json"
@@ -49,7 +50,8 @@ package() {
       -x "*/build_logs/*" \
       -x "*/*.sh" \
       -x "*/node_modules/*" \
-      -x "*/js/src/*" \
+      -x "*/js/client/*" \
+      -x "*/js/admin/*" \
       -x "*/Gruntfile.js" \
       -x "*/vite.config.js" \
       -x "*/package*.json"
@@ -74,6 +76,10 @@ deploy() {
   mkdir -p ${docker_data_dir}
 
   unzip -d ${docker_data_dir}/ ./${pkgname}.zip
+
+  if [[ -d "${docker_data_dir}/wp-content/plugins/${pkgname}" ]]; then
+    rm -r ${docker_data_dir}/wp-content/plugins/${pkgname}
+  fi
 
   cp -R ${docker_data_dir}/${pkgname} ${docker_data_dir}/wp-content/plugins/
 

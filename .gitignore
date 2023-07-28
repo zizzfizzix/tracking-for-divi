@@ -12,3 +12,5 @@ vendor/
 docker/data/
 build_logs/
 *.swp
+languages/*.pot
+languages/*.mo
