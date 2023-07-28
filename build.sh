@@ -40,7 +40,8 @@ package() {
       -x "*/js/admin/*" \
       -x "*/Gruntfile.js" \
       -x "*/vite.config.js" \
-      -x "*/package*.json"
+      -x "*/package*.json" \
+      -x "*/languages/*.po*"
     ;;
   develop)
     zip -r ${pkgname}/${pkgname}.zip ./${pkgname}/ \
@@ -77,7 +78,7 @@ deploy() {
 
   unzip -d ${docker_data_dir}/ ./${pkgname}.zip
 
-  if [[ -d "${docker_data_dir}/wp-content/plugins/${pkgname}" ]]; then
+  if [[ -d ${docker_data_dir}/wp-content/plugins/${pkgname} ]]; then
     rm -r ${docker_data_dir}/wp-content/plugins/${pkgname}
   fi
 
