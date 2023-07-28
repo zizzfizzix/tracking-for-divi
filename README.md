@@ -91,7 +91,7 @@ _This will only work if you have a [Google Tag](https://support.google.com/googl
 
 ---
 
-**Note:** This plugin hasn't been tested with Divi forms that redirect to a success page. It should work just as well, however the redirect could interrupt the tracking flow.
+**Note:** This plugin hasn't been thoroughly tested with Divi forms that redirect to a success page. The tracking works just as well, however the redirect could interrupt the tracking flow e.g. if Google Tag Manager has a lot of logic and doesn't trigger the tags in time. The tags themselves these days [use the beacon API](https://support.google.com/analytics/answer/9964640#event-batching) (see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API) for reference) so the requests shouldn't be interrupted as long as they are fired before website unload.
 
 ## Installation
 
