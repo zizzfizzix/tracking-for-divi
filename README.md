@@ -3,7 +3,7 @@
 **Contributors:** kubawtf  
 **Tags:** divi, dataLayer, tracking, tag manager  
 **Requires at least:** 5.3  
-**Tested up to:** 6.2.2  
+**Tested up to:** 6.9.1  
 **Requires PHP:** 7.4  
 **Stable tag:** 0.2.0  
 **License:** Apache 2.0  
@@ -118,6 +118,12 @@ Yes, by default this plugin uses a `contact_form_submit` event, however you can 
 ## Screenshots
 
 ## Changelog
+
+### 1.0.0
+
+- Refactored to use Divi's server-side `et_pb_contact_form_submit` hook for more reliable form submission detection.
+- Tracking data is now captured server-side and passed to the client, eliminating client-side form field parsing.
+- Updated build tooling to Vite 7 and @kucrut/vite-for-wp 0.12.0.
 
 ### 0.2.0
 
