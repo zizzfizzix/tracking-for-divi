@@ -5,7 +5,7 @@
 **Requires at least:** 5.3  
 **Tested up to:** 6.9.1  
 **Requires PHP:** 7.4  
-**Stable tag:** 0.2.0 <!-- x-release-please-version -->  
+**Stable tag:** 1.0.0 <!-- x-release-please-version -->  
 **License:** Apache 2.0  
 **License URI:** <https://www.apache.org/licenses/LICENSE-2.0>
 

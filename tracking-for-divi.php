@@ -13,7 +13,7 @@
  * Author URI:        https://kuba.wtf/
  * Text Domain:       tracking-for-divi
  * Domain Path:       /languages
- * Version:           0.2.0 x-release-please-version
+ * Version:           1.0.0 x-release-please-version
  * Requires at least: 5.3
  * Requires PHP:      7.4
  * Tested up to:      6.9.1
