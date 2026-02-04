@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.0](https://github.com/zizzfizzix/tracking-for-divi/compare/v0.2.0...v1.0.0) (2026-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* Extract form data from the BE (fixes #4) ([#6](https://github.com/zizzfizzix/tracking-for-divi/issues/6))
+
+### Features
+
+* Extract form data from the BE (fixes [#4](https://github.com/zizzfizzix/tracking-for-divi/issues/4)) ([#6](https://github.com/zizzfizzix/tracking-for-divi/issues/6)) ([87cb74b](https://github.com/zizzfizzix/tracking-for-divi/commit/87cb74be48013a4eb5c60033797f79166ae71cb3))
+
+
+### Bug Fixes
+
+* **ci:** adjust release versions in src files ([13913df](https://github.com/zizzfizzix/tracking-for-divi/commit/13913df47ee374cff6099f75a0d5a03cf6681fd4))
+* **ci:** pass token for release please ([213b246](https://github.com/zizzfizzix/tracking-for-divi/commit/213b246050c2299be6e7c9e8e3e90d8743fa55d2))
+
 ## [0.2.0](https://github.com/zizzfizzix/tracking-for-divi/compare/v0.1.1...v0.2.0) (2023-07-28)
 
 
