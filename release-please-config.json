@@ -1,0 +1,24 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "tracking-for-divi.php",
+          "regex": "Version:\\s+(?<version>\\d+\\.\\d+\\.\\d+)"
+        },
+        {
+          "type": "json",
+          "path": "package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "generic",
+          "path": "README.md",
+          "regex": "\\*\\*Stable tag:\\*\\*\\s+(?<version>\\d+\\.\\d+\\.\\d+)"
+        }
+      ]
+    }
+  }
+}
