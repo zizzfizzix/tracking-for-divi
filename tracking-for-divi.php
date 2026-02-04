@@ -2,18 +2,21 @@
 /**
  * WordPress plugin to send tracking events on successful Divi form submission.
  *
- * @package         tracking-for-divi
- * @license         Apache-2.0
- * @author          Kuba Serafinowski
+ * @package           tracking-for-divi
+ * @license           Apache-2.0
+ * @author            Kuba Serafinowski
  *
- * Plugin Name:     Tracking for Divi
- * Plugin URI:      https://github.com/zizzfizzix/tracking-for-divi
- * Description:     Track successful Divi contact form submissions.
- * Author:          Kuba Serafinowski
- * Author URI:      https://kuba.wtf/
- * Text Domain:     tracking-for-divi
- * Domain Path:     /languages
- * Version:         0.2.0
+ * Plugin Name:       Tracking for Divi
+ * Plugin URI:        https://github.com/zizzfizzix/tracking-for-divi
+ * Description:       Track successful Divi contact form submissions.
+ * Author:            Kuba Serafinowski
+ * Author URI:        https://kuba.wtf/
+ * Text Domain:       tracking-for-divi
+ * Domain Path:       /languages
+ * Version:           0.2.0
+ * Requires at least: 5.3
+ * Requires PHP:      7.4
+ * Tested up to:      6.9.1
  */
 
 namespace DigitallStudio\TrackingForDivi;

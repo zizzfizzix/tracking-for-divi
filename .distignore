@@ -1,4 +1,6 @@
 # A set of files you probably don't want in your WordPress.org distribution
+
+# Hidden files and OS files
 .babelrc
 .deployignore
 .distignore
@@ -12,16 +14,25 @@
 .travis.yml
 .DS_Store
 Thumbs.db
+.circleci
+
+# Build and dev config
+Gruntfile.js
+/package.json
+/package-lock.json
+/composer.json
+/composer.lock
+webpack.config.js
+vite.config.js
+wp-cli.local.yml
+yarn.lock
+dependencies.yml
+/.vscode
+/.claude
+
+# CI/CD config
 behat.yml
 bitbucket-pipelines.yml
-bin
-.circleci/config.yml
-composer.json
-composer.lock
-dependencies.yml
-Gruntfile.js
-package.json
-package-lock.json
 phpunit.xml
 phpunit.xml.dist
 multisite.xml
@@ -30,12 +41,27 @@ multisite.xml.dist
 phpcs.xml
 .phpcs.xml.dist
 phpcs.xml.dist
-README.md
-webpack.config.js
-wp-cli.local.yml
-yarn.lock
+/release-please-config.json
+/.release-please-manifest.json
+
+# Source directories (not needed in production)
+bin
 tests
 node_modules
+/js/client
+/js/admin
+/docker
+build_logs
+/dist
+
+# Documentation (readme.txt is generated)
+/README.md
+
+# Source translation files (only .mo needed)
+languages/*.po
+
+# Build artifacts and archives
 *.sql
 *.tar.gz
 *.zip
+*.sh

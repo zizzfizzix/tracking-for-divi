@@ -28,41 +28,21 @@ package() {
 
   wp i18n make-mo ./languages
 
-  pushd ..
+  # Create dist directory and copy files using .distignore
+  rm -rf ./dist
+  mkdir -p ./dist/${pkgname}
 
-  case $1 in
-  production)
-    zip -r ${pkgname}/${pkgname}.zip ./${pkgname}/ \
-      -x "*/.*" \
-      -x "**/*.zip" \
-      -x "*/docker/*" \
-      -x "*/build_logs/*" \
-      -x "*/*.sh" \
-      -x "*/node_modules/*" \
-      -x "*/js/client/*" \
-      -x "*/js/admin/*" \
-      -x "*/Gruntfile.js" \
-      -x "*/vite.config.js" \
-      -x "*/package*.json" \
-      -x "*/languages/*.po"
-    ;;
-  develop)
-    zip -r ${pkgname}/${pkgname}.zip ./${pkgname}/ \
-      -x "*/.*" \
-      -x "**/*.zip" \
-      -x "*/docker/*" \
-      -x "*/build_logs/*" \
-      -x "*/*.sh" \
-      -x "*/node_modules/*" \
-      -x "*/js/client/*" \
-      -x "*/js/admin/*" \
-      -x "*/Gruntfile.js" \
-      -x "*/vite.config.js" \
-      -x "*/package*.json"
-    ;;
-  esac
+  rsync -av --exclude-from='.distignore' . ./dist/${pkgname}/
 
-  popd
+  # For develop builds, keep .po files for translation work
+  if [[ $1 == "develop" ]]; then
+    cp ./languages/*.po ./dist/${pkgname}/languages/ 2>/dev/null || true
+  fi
+
+  # Create the zip
+  cd ./dist && zip -r ../${pkgname}.zip ${pkgname}
+  cd ..
+  rm -rf ./dist
 }
 
 deploy() {
