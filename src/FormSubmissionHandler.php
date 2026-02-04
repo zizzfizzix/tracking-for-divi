@@ -69,6 +69,7 @@ class FormSubmissionHandler {
 			'formId'   => $form_info['contact_form_unique_id'] ?? (string) ( $form_info['contact_form_number'] ?? '0' ),
 			'postId'   => $form_info['post_id'] ?? 0,
 			'formData' => $this->extract_form_data( $processed_fields ),
+			'allFormData' => $processed_fields,
 		);
 	}
 
@@ -80,13 +81,13 @@ class FormSubmissionHandler {
 	 */
 	private function extract_form_data( array $fields ): array {
 		$data = array();
-		foreach ( $fields as $field ) {
-			$label = strtolower( $field['label'] ?? '' );
-			if ( strpos( $label, 'name' ) !== false && ! isset( $data['name'] ) ) {
+		foreach ( $fields as $field_name => $field ) {
+			$name = strtolower( $field_name );
+			if ( 'name' === $name ) {
 				$data['name'] = $field['value'];
-			} elseif ( strpos( $label, 'email' ) !== false && ! isset( $data['email'] ) ) {
+			} elseif ( 'email' === $name ) {
 				$data['email'] = $field['value'];
-			} elseif ( strpos( $label, 'message' ) !== false && ! isset( $data['message'] ) ) {
+			} elseif ( 'message' === $name ) {
 				$data['message'] = $field['value'];
 			}
 		}

@@ -23,6 +23,7 @@ class SettingsPage {
 		'send_datalayer_event'                     => 'on',
 		'datalayer_variable_name'                  => 'dataLayer',
 		'contact_form_submit_datalayer_event_name' => 'contact_form_submit',
+		'include_all_form_data'                    => null,
 		'send_gtag_event'                          => null,
 		'contact_form_submit_gtag_event_name'      => 'contact_form_submit',
 		'send_gads_conversion'                     => null,
@@ -126,6 +127,14 @@ class SettingsPage {
 		);
 
 		add_settings_field(
+			'include_all_form_data',
+			__( 'Include all form data', 'tracking-for-divi' ),
+			array( $this, 'include_all_form_data_callback' ),
+			'tracking-for-divi-admin',
+			'tracking_for_divi_setting_section'
+		);
+
+		add_settings_field(
 			'send_gtag_event',
 			__( 'Send a gtag event', 'tracking-for-divi' ),
 			array( $this, 'send_gtag_event_callback' ),
@@ -192,6 +201,10 @@ class SettingsPage {
 
 		if ( isset( $input['contact_form_submit_datalayer_event_name'] ) ) {
 			$sanitary_values['contact_form_submit_datalayer_event_name'] = sanitize_text_field( $input['contact_form_submit_datalayer_event_name'] );
+		}
+
+		if ( isset( $input['include_all_form_data'] ) ) {
+			$sanitary_values['include_all_form_data'] = $input['include_all_form_data'];
 		}
 
 		if ( isset( $input['send_gtag_event'] ) ) {
@@ -290,6 +303,17 @@ class SettingsPage {
 			isset( $this->tracking_for_divi_options['contact_form_submit_datalayer_event_name'] ) ? esc_attr( $this->tracking_for_divi_options['contact_form_submit_datalayer_event_name'] ) : '',
       // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			( isset( $this->tracking_for_divi_options['send_datalayer_event'] ) && 'on' === $this->tracking_for_divi_options['send_datalayer_event'] ) ? 'required' : ''
+		);
+	}
+
+	/**
+	 * Print the include_all_form_data input.
+	 */
+	public function include_all_form_data_callback() {
+		printf(
+			'<input type="checkbox" name="tracking_for_divi_options[include_all_form_data]" id="include_all_form_data" %s> <label for="include_all_form_data">%s</label>',
+			( isset( $this->tracking_for_divi_options['include_all_form_data'] ) && 'on' === $this->tracking_for_divi_options['include_all_form_data'] ) ? 'checked' : '',
+			esc_html__( 'Include all form fields with their full metadata in tracking events', 'tracking-for-divi' )
 		);
 	}
 
