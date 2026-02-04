@@ -39,11 +39,13 @@ The structure of the object pushed to the dataLayer is the following, with the d
 {
   event: "contact_form_submit",
   formId: string,
+  postId: number,
   formData: {
     name: string,
     email: string,
     message: string,
-  }
+  },
+  allFormData?: Record<string, unknown>, // when "Include all form data" is enabled
 }
 ```
 
@@ -51,19 +53,23 @@ It's up to you to use or discard the form data.
 
 ### Google Analytics 4 reporting
 
-The Google Analytics event is sent like so:
+The Google Analytics event is sent with flattened parameters:
 
 ```typescript
 gtag(
   "event",
   "contact_form_submit",
   {
-    formId: "0",
+    form_id: "divi/contact-form-0",
+    name: "John",
+    email: "john@example.com",
+    message: "Hello",
+    // additional fields when "Include all form data" is enabled
   }
 );
 ```
 
-The form data isn't sent as that could seriously violate user privacy.
+Form data (name, email, message) is included by default. When "Include all form data" is enabled, all form fields are flattened into the event parameters.
 
 _This will only work if you have a [Google Tag](https://support.google.com/google-ads/answer/11994839) already deployed on the website i.e. the `gtag()` function is available._ Otherwise, you will see a warning in your console like this:
 
@@ -123,6 +129,9 @@ Yes, by default this plugin uses a `contact_form_submit` event, however you can 
 
 - Refactored to use Divi's server-side `et_pb_contact_form_submit` hook for more reliable form submission detection.
 - Tracking data is now captured server-side and passed to the client, eliminating client-side form field parsing.
+- Added "Include all form data" option to include all form fields in tracking events.
+- When "Include all form data" is enabled, gtag events include all form field values as flat parameters.
+- Fixed form field matching to use exact field names (`name`, `email`, `message`) instead of labels.
 - Updated build tooling to Vite 7 and @kucrut/vite-for-wp 0.12.0.
 
 ### 0.2.0
