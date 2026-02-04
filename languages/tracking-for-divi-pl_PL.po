@@ -1,134 +1,131 @@
-# Copyright (C) 2023 Kuba Serafinowski
-# This file is distributed under the same license as the Tracking for Divi plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: Tracking for Divi 0.1.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tracking-for-"
-"divi\n"
-"POT-Creation-Date: 2023-07-28T12:38:43+00:00\n"
-"PO-Revision-Date: 2023-07-28 13:41+0100\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/tracking-for-divi\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-07-28T12:38:43+00:00\n"
+"PO-Revision-Date: 2023-07-28 13:41+0100\n"
+"Language: pl\n"
 "X-Generator: Poedit 3.3.2\n"
 "X-Domain: tracking-for-divi\n"
 
 #. Plugin Name of the plugin
-#: src/Admin/SettingsPage.php:54 src/Admin/SettingsPage.php:55
-#: src/Admin/SettingsPage.php:68
+#: tracking-for-divi.php
+#: src/Admin/SettingsPage.php:55
+#: src/Admin/SettingsPage.php:56
+#: src/Admin/SettingsPage.php:69
 msgid "Tracking for Divi"
 msgstr "Tracking for Divi"
 
 #. Plugin URI of the plugin
+#: tracking-for-divi.php
 msgid "https://github.com/zizzfizzix/tracking-for-divi"
 msgstr "https://github.com/zizzfizzix/tracking-for-divi"
 
 #. Description of the plugin
+#: tracking-for-divi.php
 msgid "Track successful Divi contact form submissions."
 msgstr "Śledź pomyślne przesłania formularza kontaktowego Divi."
 
 #. Author of the plugin
+#: tracking-for-divi.php
 msgid "Kuba Serafinowski"
 msgstr "Kuba Serafinowski"
 
 #. Author URI of the plugin
+#: tracking-for-divi.php
 msgid "https://kuba.wtf/"
 msgstr "https://kuba.wtf/"
 
-#: src/Admin/SettingsPage.php:93
+#: src/Admin/SettingsPage.php:94
 msgid "Form submission tracking"
 msgstr "Śledzenie przesyłania formularzy"
 
-#: src/Admin/SettingsPage.php:100
+#: src/Admin/SettingsPage.php:101
 msgid "Send a dataLayer event"
 msgstr "Wyślij zdarzenie dataLayer"
 
-#: src/Admin/SettingsPage.php:108
+#: src/Admin/SettingsPage.php:109
 msgid "dataLayer variable name"
 msgstr "Nazwa zmiennej dataLayer"
 
-#: src/Admin/SettingsPage.php:119
+#: src/Admin/SettingsPage.php:120
 msgid "dataLayer event name"
 msgstr "Nazwa zdarzenia dataLayer"
 
-#: src/Admin/SettingsPage.php:130
+#: src/Admin/SettingsPage.php:139
 msgid "Send a gtag event"
 msgstr "Wyślij zdarzenie gtag"
 
-#: src/Admin/SettingsPage.php:138
+#: src/Admin/SettingsPage.php:147
 msgid "gtag event name"
 msgstr "Nazwa zdarzenia gtag"
 
-#: src/Admin/SettingsPage.php:149
+#: src/Admin/SettingsPage.php:158
 msgid "Send a Google Ads conversion"
 msgstr "Wyślij zdarzenie konwersji Google Ads"
 
-#: src/Admin/SettingsPage.php:157
+#: src/Admin/SettingsPage.php:166
 msgid "Conversion ID"
 msgstr "Identyfikator konwersji"
 
-#: src/Admin/SettingsPage.php:168
+#: src/Admin/SettingsPage.php:177
 msgid "Conversion Label"
 msgstr "Etykieta konwersji"
 
 #. translators: This paragraph contains three links with anchors that are translated separately.
-#: src/Admin/SettingsPage.php:227
-msgid ""
-"On successful form submissions, you can send an event to the %1$s, directly "
-"to Google Analytics (via %2$s), or %3$s in Google Ads."
-msgstr ""
-"W przypadku prawidłowej wysyłki formularza możesz wygenerować zdarzenie "
-"%1$s, wysłać je bezpośrednio do Google Analytics (poprzez %2$s) lub %3$s do "
-"Google Ads."
+#: src/Admin/SettingsPage.php:240
+#, php-format
+msgid "On successful form submissions, you can send an event to the %1$s, directly to Google Analytics (via %2$s), or %3$s in Google Ads."
+msgstr "W przypadku prawidłowej wysyłki formularza możesz wygenerować zdarzenie %1$s, wysłać je bezpośrednio do Google Analytics (poprzez %2$s) lub %3$s do Google Ads."
 
 #. translators: This is link one.
-#: src/Admin/SettingsPage.php:238
+#: src/Admin/SettingsPage.php:251
 msgid "dataLayer"
 msgstr "dataLayer"
 
 #. translators: This is link two.
-#: src/Admin/SettingsPage.php:246
+#: src/Admin/SettingsPage.php:259
 msgid "custom events"
 msgstr "niestandardowe zdarzenia"
 
 #. translators: This is link three.
-#: src/Admin/SettingsPage.php:254
+#: src/Admin/SettingsPage.php:267
 msgid "track a conversion"
 msgstr "zaraportować konwersję"
 
-#: src/Admin/SettingsPage.php:257
-msgid ""
-"You can do all three at the same time but if you use the dataLayer with "
-"Google Tag Manager you probably want to orchestrate the rest there rather "
-"than send directly with the other options."
-msgstr ""
-"Możesz użyć wszystkich trzech naraz, ale jeśli używasz dataLayer wraz z "
-"Google Tag Managerem prawdopodobnie będziesz woleć ustawić w nim cały "
-"proces zamiast wysyłać zdarzenia osobno."
+#: src/Admin/SettingsPage.php:270
+msgid "You can do all three at the same time but if you use the dataLayer with Google Tag Manager you probably want to orchestrate the rest there rather than send directly with the other options."
+msgstr "Możesz użyć wszystkich trzech naraz, ale jeśli używasz dataLayer wraz z Google Tag Managerem prawdopodobnie będziesz woleć ustawić w nim cały proces zamiast wysyłać zdarzenia osobno."
 
-#: src/Admin/SettingsPage.php:258
-msgid ""
-"dataLayer event is enabled by default as it has no direct impact unless "
-"picked up."
-msgstr ""
-"Zdarzenie dataLayer jest włączone domyślnie ponieważ nie ma na nic wpływu "
-"dopóki nie zostanie wykorzystane."
+#: src/Admin/SettingsPage.php:271
+msgid "dataLayer event is enabled by default as it has no direct impact unless picked up."
+msgstr "Zdarzenie dataLayer jest włączone domyślnie ponieważ nie ma na nic wpływu dopóki nie zostanie wykorzystane."
 
-#: src/Admin/SettingsPage.php:268
+#: src/Admin/SettingsPage.php:281
 msgid "Send an event to dataLayer for use by Google Tag Manager"
 msgstr "Wyślij zdarzenie dataLayer do wykorzystania przez Google Tag Manager"
 
-#: src/Admin/SettingsPage.php:303
+#: src/Admin/SettingsPage.php:327
 msgid "Send an event directly to Google Analytics"
 msgstr "Wyślij zdarzenie bezpośrednio do Google Analytics"
 
-#: src/Admin/SettingsPage.php:326
+#: src/Admin/SettingsPage.php:350
 msgid "Send a conversion event directly to Google Ads"
 msgstr "Wyślij zdarzenie konwersji bezpośrednio do Google Ads"
 
-#: src/Admin/SettingsPage.php:379
+#: src/Admin/SettingsPage.php:403
 msgid "Settings"
 msgstr "Ustawienia"
+
+#: src/Admin/SettingsPage.php:131
+msgid "Include all form data"
+msgstr "Załącz wszystkie dane z formularzy"
+
+#: src/Admin/SettingsPage.php:316
+msgid "Include all form fields with their full metadata in tracking events"
+msgstr "Załącz wszystkie pola formularzy z ich pełnymi metadanymi w zdarzeniach śledzących"
