@@ -5,8 +5,7 @@
       "extra-files": [
         {
           "type": "generic",
-          "path": "tracking-for-divi.php",
-          "regex": "Version:\\s+(?<version>\\d+\\.\\d+\\.\\d+)"
+          "path": "tracking-for-divi.php"
         },
         {
           "type": "json",
@@ -15,8 +14,7 @@
         },
         {
           "type": "generic",
-          "path": "README.md",
-          "regex": "\\*\\*Stable tag:\\*\\*\\s+(?<version>\\d+\\.\\d+\\.\\d+)"
+          "path": "README.md"
         }
       ]
     }
