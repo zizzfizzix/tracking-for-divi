@@ -114,20 +114,3 @@ Yes, by default this plugin uses a variable named `dataLayer`, however you can c
 ### Can I use a different event name?
 
 Yes, by default this plugin uses a `contact_form_submit` event, however you can change that on the Settings page.
-
-## Screenshots
-
-## Changelog
-
-### 0.2.0
-
-- Added reporting directly to Google Analytics and Google Ads using gtag.js.
-- Added a settings screen with ability to rename dataLayer, change the event names and choose which events to send.
-
-### 0.1.1
-
-- Fixed a rename omission that broke the plugin.
-
-### 0.1.0
-
-- Initial release, supporting only a dataLayer push
