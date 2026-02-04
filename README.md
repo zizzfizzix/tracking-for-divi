@@ -3,7 +3,7 @@
 **Contributors:** kubawtf  
 **Tags:** divi, dataLayer, tracking, tag manager  
 **Requires at least:** 5.3  
-**Tested up to:** 6.2.2  
+**Tested up to:** 6.9.1  
 **Requires PHP:** 7.4  
 **Stable tag:** 0.2.0  
 **License:** Apache 2.0  
@@ -39,11 +39,13 @@ The structure of the object pushed to the dataLayer is the following, with the d
 {
   event: "contact_form_submit",
   formId: string,
+  postId: number,
   formData: {
     name: string,
     email: string,
     message: string,
-  }
+  },
+  allFormData?: Record<string, unknown>, // when "Include all form data" is enabled
 }
 ```
 
@@ -51,19 +53,23 @@ It's up to you to use or discard the form data.
 
 ### Google Analytics 4 reporting
 
-The Google Analytics event is sent like so:
+The Google Analytics event is sent with flattened parameters:
 
 ```typescript
 gtag(
   "event",
   "contact_form_submit",
   {
-    formId: "0",
+    form_id: "divi/contact-form-0",
+    name: "John",
+    email: "john@example.com",
+    message: "Hello",
+    // additional fields when "Include all form data" is enabled
   }
 );
 ```
 
-The form data isn't sent as that could seriously violate user privacy.
+Form data (name, email, message) is included by default. When "Include all form data" is enabled, all form fields are flattened into the event parameters.
 
 _This will only work if you have a [Google Tag](https://support.google.com/google-ads/answer/11994839) already deployed on the website i.e. the `gtag()` function is available._ Otherwise, you will see a warning in your console like this:
 

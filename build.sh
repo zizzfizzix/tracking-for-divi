@@ -26,6 +26,8 @@ package() {
   npm install
   npm run build
 
+  wp i18n make-pot . languages/${pkgname}.pot --domain=${pkgname} --exclude=node_modules,vendor,docker,dist,build
+  wp i18n update-po languages/${pkgname}.pot
   wp i18n make-mo ./languages
 
   # Create dist directory and copy files using .distignore

@@ -66,6 +66,19 @@ function add_front_script(): void {
 add_front_script();
 
 /**
+ * Initialize server-side form submission handler.
+ */
+function init_form_submission_handler(): void {
+	$theme = wp_get_theme();
+
+	if ( 'Divi' === $theme->name || 'Divi' === $theme->parent_theme ) {
+		new FormSubmissionHandler();
+	}
+}
+
+add_action( 'plugins_loaded', __NAMESPACE__ . '\init_form_submission_handler' );
+
+/**
  * Wrap settings bootstrap into a function to avoid global var scope.
  */
 function bootstrap_settings() {
