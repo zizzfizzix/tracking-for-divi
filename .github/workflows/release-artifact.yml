@@ -1,0 +1,66 @@
+name: Build and Upload Release Assets
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: 'npm'
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer, wp-cli
+
+      - name: Install dependencies
+        run: |
+          npm install
+          composer install --no-dev
+
+      - name: Generate readme.txt from README.md
+        uses: sixach/wp-readme-generator-action@v1.1
+        with:
+          input_path: ./tracking-for-divi.php
+          project_type: plugin
+          output_path: ./readme.txt
+
+      - name: Build plugin
+        run: |
+          npm run build
+          wp i18n make-mo ./languages
+          composer dump-autoload -o --no-dev
+
+      - name: Get version number
+        id: get_version
+        run: echo "version=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Create plugin zip
+        run: |
+          mkdir -p dist/tracking-for-divi
+          rsync -av --exclude-from='.distignore' . dist/tracking-for-divi/
+          cd dist && zip -r ../tracking-for-divi.zip tracking-for-divi
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: tracking-for-divi.zip
+          append_body: true
+          body: |
+
+            ## Installation
+
+            Download `tracking-for-divi.zip` and install via WordPress Admin > Plugins > Add New > Upload Plugin.
