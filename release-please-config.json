@@ -19,7 +19,7 @@
         },
         {
           "type": "json",
-          "path": "package.json",
+          "path": "package-lock.json",
           "jsonpath": "$.packages[''].version"
         },
         {
