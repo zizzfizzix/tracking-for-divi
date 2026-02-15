@@ -7,6 +7,10 @@
 
 namespace DigitallStudio\TrackingForDivi;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Captures Divi contact form submissions and injects tracking data into the response.
  */

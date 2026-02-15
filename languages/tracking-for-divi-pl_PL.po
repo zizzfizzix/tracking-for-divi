@@ -15,9 +15,9 @@ msgstr ""
 
 #. Plugin Name of the plugin
 #: tracking-for-divi.php
-#: src/Admin/SettingsPage.php:55
-#: src/Admin/SettingsPage.php:56
-#: src/Admin/SettingsPage.php:69
+#: src/Admin/SettingsPage.php:59
+#: src/Admin/SettingsPage.php:60
+#: src/Admin/SettingsPage.php:73
 msgid "Tracking for Divi"
 msgstr "Tracking for Divi"
 
@@ -41,91 +41,91 @@ msgstr "Kuba Serafinowski"
 msgid "https://kuba.wtf/"
 msgstr "https://kuba.wtf/"
 
-#: src/Admin/SettingsPage.php:94
+#: src/Admin/SettingsPage.php:98
 msgid "Form submission tracking"
 msgstr "Śledzenie przesyłania formularzy"
 
-#: src/Admin/SettingsPage.php:101
+#: src/Admin/SettingsPage.php:105
 msgid "Send a dataLayer event"
 msgstr "Wyślij zdarzenie dataLayer"
 
-#: src/Admin/SettingsPage.php:109
+#: src/Admin/SettingsPage.php:113
 msgid "dataLayer variable name"
 msgstr "Nazwa zmiennej dataLayer"
 
-#: src/Admin/SettingsPage.php:120
+#: src/Admin/SettingsPage.php:124
 msgid "dataLayer event name"
 msgstr "Nazwa zdarzenia dataLayer"
 
-#: src/Admin/SettingsPage.php:139
+#: src/Admin/SettingsPage.php:143
 msgid "Send a gtag event"
 msgstr "Wyślij zdarzenie gtag"
 
-#: src/Admin/SettingsPage.php:147
+#: src/Admin/SettingsPage.php:151
 msgid "gtag event name"
 msgstr "Nazwa zdarzenia gtag"
 
-#: src/Admin/SettingsPage.php:158
+#: src/Admin/SettingsPage.php:162
 msgid "Send a Google Ads conversion"
 msgstr "Wyślij zdarzenie konwersji Google Ads"
 
-#: src/Admin/SettingsPage.php:166
+#: src/Admin/SettingsPage.php:170
 msgid "Conversion ID"
 msgstr "Identyfikator konwersji"
 
-#: src/Admin/SettingsPage.php:177
+#: src/Admin/SettingsPage.php:181
 msgid "Conversion Label"
 msgstr "Etykieta konwersji"
 
 #. translators: This paragraph contains three links with anchors that are translated separately.
-#: src/Admin/SettingsPage.php:240
+#: src/Admin/SettingsPage.php:244
 #, php-format
 msgid "On successful form submissions, you can send an event to the %1$s, directly to Google Analytics (via %2$s), or %3$s in Google Ads."
 msgstr "W przypadku prawidłowej wysyłki formularza możesz wygenerować zdarzenie %1$s, wysłać je bezpośrednio do Google Analytics (poprzez %2$s) lub %3$s do Google Ads."
 
 #. translators: This is link one.
-#: src/Admin/SettingsPage.php:251
+#: src/Admin/SettingsPage.php:255
 msgid "dataLayer"
 msgstr "dataLayer"
 
 #. translators: This is link two.
-#: src/Admin/SettingsPage.php:259
+#: src/Admin/SettingsPage.php:263
 msgid "custom events"
 msgstr "niestandardowe zdarzenia"
 
 #. translators: This is link three.
-#: src/Admin/SettingsPage.php:267
+#: src/Admin/SettingsPage.php:271
 msgid "track a conversion"
 msgstr "zaraportować konwersję"
 
-#: src/Admin/SettingsPage.php:270
+#: src/Admin/SettingsPage.php:274
 msgid "You can do all three at the same time but if you use the dataLayer with Google Tag Manager you probably want to orchestrate the rest there rather than send directly with the other options."
 msgstr "Możesz użyć wszystkich trzech naraz, ale jeśli używasz dataLayer wraz z Google Tag Managerem prawdopodobnie będziesz woleć ustawić w nim cały proces zamiast wysyłać zdarzenia osobno."
 
-#: src/Admin/SettingsPage.php:271
+#: src/Admin/SettingsPage.php:275
 msgid "dataLayer event is enabled by default as it has no direct impact unless picked up."
 msgstr "Zdarzenie dataLayer jest włączone domyślnie ponieważ nie ma na nic wpływu dopóki nie zostanie wykorzystane."
 
-#: src/Admin/SettingsPage.php:281
+#: src/Admin/SettingsPage.php:285
 msgid "Send an event to dataLayer for use by Google Tag Manager"
 msgstr "Wyślij zdarzenie dataLayer do wykorzystania przez Google Tag Manager"
 
-#: src/Admin/SettingsPage.php:327
+#: src/Admin/SettingsPage.php:331
 msgid "Send an event directly to Google Analytics"
 msgstr "Wyślij zdarzenie bezpośrednio do Google Analytics"
 
-#: src/Admin/SettingsPage.php:350
+#: src/Admin/SettingsPage.php:354
 msgid "Send a conversion event directly to Google Ads"
 msgstr "Wyślij zdarzenie konwersji bezpośrednio do Google Ads"
 
-#: src/Admin/SettingsPage.php:403
+#: src/Admin/SettingsPage.php:407
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: src/Admin/SettingsPage.php:131
+#: src/Admin/SettingsPage.php:135
 msgid "Include all form data"
 msgstr "Załącz wszystkie dane z formularzy"
 
-#: src/Admin/SettingsPage.php:316
+#: src/Admin/SettingsPage.php:320
 msgid "Include all form fields with their full metadata in tracking events"
 msgstr "Załącz wszystkie pola formularzy z ich pełnymi metadanymi w zdarzeniach śledzących"
