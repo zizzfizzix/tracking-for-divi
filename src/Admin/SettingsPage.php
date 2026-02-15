@@ -7,6 +7,10 @@
 
 namespace DigitallStudio\TrackingForDivi\Admin;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 use DigitallStudio\TrackingForDivi;
 use Kucrut\Vite;
 

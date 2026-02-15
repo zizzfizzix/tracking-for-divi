@@ -1,15 +1,17 @@
 # Tracking for Divi
 
-**Contributors:** kubawtf  
-**Tags:** divi, dataLayer, tracking, tag manager  
-**Requires at least:** 5.3  
-**Tested up to:** 6.9.1  
-**Requires PHP:** 7.4  
-**Stable tag:** 1.0.0 <!-- x-release-please-version -->  
-**License:** Apache 2.0  
-**License URI:** <https://www.apache.org/licenses/LICENSE-2.0>
+**Contributors:** kubawtf
+**Tags:** divi, dataLayer, tracking, tag manager
+**Requires at least:** 5.3
+**Tested up to:** 6.9
+**Requires PHP:** 7.4
+<!-- x-release-please-start-version -->
+**Stable tag:** 1.0.0
+<!-- x-release-please-end-version -->
+**License:** GPL-2.0-or-later
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 
-If you want to track your completed form submissions using the Divi theme look no further.
+Track successful Divi contact form submissions with dataLayer events, Google Analytics, and Google Ads conversions.
 
 ## Description
 

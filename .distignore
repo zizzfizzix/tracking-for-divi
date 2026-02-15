@@ -20,7 +20,6 @@ Thumbs.db
 Gruntfile.js
 /package.json
 /package-lock.json
-/composer.json
 /composer.lock
 webpack.config.js
 vite.config.js

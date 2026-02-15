@@ -3,7 +3,7 @@
  * WordPress plugin to send tracking events on successful Divi form submission.
  *
  * @package           tracking-for-divi
- * @license           Apache-2.0
+ * @license           GPL-2.0-or-later
  * @author            Kuba Serafinowski
  *
  * Plugin Name:       Tracking for Divi
@@ -13,27 +13,26 @@
  * Author URI:        https://kuba.wtf/
  * Text Domain:       tracking-for-divi
  * Domain Path:       /languages
- * Version:           1.0.0 x-release-please-version
+ * x-release-please-start-version
+ * Version:           1.0.0
+ * x-release-please-end-version
  * Requires at least: 5.3
  * Requires PHP:      7.4
- * Tested up to:      6.9.1
+ * Tested up to:      6.9
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 namespace DigitallStudio\TrackingForDivi;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 require plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 
 use Kucrut\Vite;
 use DigitallStudio\TrackingForDivi\Admin;
-
-/**
- * Load translations
- */
-function load_textdomain() {
-	load_plugin_textdomain( 'tracking-for-divi', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-
-add_action( 'init', __NAMESPACE__ . '\load_textdomain' );
 
 /**
  * Main function to avoid global variables
