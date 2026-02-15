@@ -14,7 +14,7 @@
  * Text Domain:       tracking-for-divi
  * Domain Path:       /languages
  * x-release-please-start-version
- * Version:           1.0.0
+ * Version:           1.0.1
  * x-release-please-end-version
  * Requires at least: 5.3
  * Requires PHP:      7.4
