@@ -8,7 +8,7 @@
 <!— only:github/ —>
 <!-- x-release-please-start-version -->
 <!— /only:github —>
-**Stable tag:** 1.0.0
+**Stable tag:** 1.0.1
 <!— only:github/ —>
 <!-- x-release-please-end-version -->
 <!— /only:github —>

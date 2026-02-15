@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.0...v1.0.1) (2026-02-15)
+
+
+### Bug Fixes
+
+* package-lock.json release-please config ([#13](https://github.com/zizzfizzix/tracking-for-divi/issues/13)) ([4e889a1](https://github.com/zizzfizzix/tracking-for-divi/commit/4e889a1dbae46a25b3d4c75cdbf51618589ec0de))
+* wordpress.org validator issues ([#11](https://github.com/zizzfizzix/tracking-for-divi/issues/11)) ([79f910a](https://github.com/zizzfizzix/tracking-for-divi/commit/79f910a136a7106f6f6a688feb819703dd928426))
+
 ## [1.0.0](https://github.com/zizzfizzix/tracking-for-divi/compare/v0.2.0...v1.0.0) (2026-02-04)
 
 
