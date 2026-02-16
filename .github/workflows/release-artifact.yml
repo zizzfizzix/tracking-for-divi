@@ -32,11 +32,25 @@ jobs:
           composer install --no-dev
 
       - name: Generate readme.txt from README.md
-        uses: sixach/wp-readme-generator-action@v1.1
-        with:
-          input_path: ./tracking-for-divi.php
-          project_type: plugin
-          output_path: ./readme.txt
+        run: |
+          awk '
+            # Skip HTML comment lines
+            /^<!--.*-->$/ { next }
+
+            # Convert markdown headers to WP readme style
+            /^### / { sub(/^### /, "= ");  $0 = $0 " =";  print; next }
+            /^## /  { sub(/^## /,  "== "); $0 = $0 " =="; seen_section = 1; print; next }
+            /^# /   { sub(/^# /,   "=== "); $0 = $0 " ==="; print; next }
+
+            # Strip bold from metadata lines (before first section)
+            !seen_section && /^\*\*[^*]+\*\*/ {
+              sub(/^\*\*/, "")
+              sub(/\*\*/, "")
+              print; next
+            }
+
+            { print }
+          ' README.md > readme.txt
 
       - name: Build plugin
         run: |

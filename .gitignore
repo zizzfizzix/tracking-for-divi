@@ -14,3 +14,4 @@ build_logs/
 *.swp
 languages/*.pot
 languages/*.mo
+readme.txt
