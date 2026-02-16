@@ -6,6 +6,7 @@
  * @license           GPL-2.0-or-later
  * @author            Kuba Serafinowski
  *
+ * @wordpress-plugin
  * Plugin Name:       Tracking for Divi
  * Plugin URI:        https://github.com/zizzfizzix/tracking-for-divi
  * Description:       Track successful Divi contact form submissions.

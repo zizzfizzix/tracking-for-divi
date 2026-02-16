@@ -1,6 +1,7 @@
 # Tracking for Divi
 
 **Contributors:** kubawtf
+**Donate link:** https://ko-fi.com/kubaserafinowski
 **Tags:** divi, dataLayer, tracking, tag manager
 **Requires at least:** 5.3
 **Tested up to:** 6.9
