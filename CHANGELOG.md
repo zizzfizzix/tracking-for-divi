@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.1...v1.0.2) (2026-02-15)
+
+
+### Bug Fixes
+
+* hide release please lines in the resulting readme.txt ([#14](https://github.com/zizzfizzix/tracking-for-divi/issues/14)) ([4b280b4](https://github.com/zizzfizzix/tracking-for-divi/commit/4b280b4fd1f74cacf2efd21e4f330c455b52e9f2))
+
 ## [1.0.1](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.0...v1.0.1) (2026-02-15)
 
 
