@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.3](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.2...v1.0.3) (2026-02-16)
+
+
+### Bug Fixes
+
+* gfm readme line collapsing ([#19](https://github.com/zizzfizzix/tracking-for-divi/issues/19)) ([fd1fa23](https://github.com/zizzfizzix/tracking-for-divi/commit/fd1fa230ab987f122421be138496addff03ffa20))
+* readme.txt generation ([#16](https://github.com/zizzfizzix/tracking-for-divi/issues/16)) ([741e136](https://github.com/zizzfizzix/tracking-for-divi/commit/741e136ba3d237f093fb2f567fbc4eef671ea05f))
+* remove remnants of the old readme.txt action ([#18](https://github.com/zizzfizzix/tracking-for-divi/issues/18)) ([2b27d05](https://github.com/zizzfizzix/tracking-for-divi/commit/2b27d05d51c623db69ed39c9e89eb369bcbc88f2))
+
 ## [1.0.2](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.1...v1.0.2) (2026-02-15)
 
 
