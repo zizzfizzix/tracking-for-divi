@@ -34,18 +34,20 @@ jobs:
       - name: Generate readme.txt from README.md
         run: |
           awk '
-            # Skip HTML comment lines
+            # Strip HTML comments (standalone lines and inline)
             /^<!--.*-->$/ { next }
+            { gsub(/<!-- [^ ]+ -->/, "") }
 
             # Convert markdown headers to WP readme style
             /^### / { sub(/^### /, "= ");  $0 = $0 " =";  print; next }
             /^## /  { sub(/^## /,  "== "); $0 = $0 " =="; seen_section = 1; print; next }
             /^# /   { sub(/^# /,   "=== "); $0 = $0 " ==="; print; next }
 
-            # Strip bold from metadata lines (before first section)
-            !seen_section && /^\*\*[^*]+\*\*/ {
+            # Strip bold and trailing whitespace from metadata lines (before first section)
+            seen_section == 0 && /^\*\*[^*]+\*\*/ {
               sub(/^\*\*/, "")
               sub(/\*\*/, "")
+              sub(/[[:space:]]+$/, "")
               print; next
             }
 
