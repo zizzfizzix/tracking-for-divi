@@ -387,7 +387,7 @@ class SettingsPage {
 	public function enqueue_admin_script( $hook ) {
 		if ( 'settings_page_tracking-for-divi' === $hook ) {
 			Vite\enqueue_asset(
-				WP_PLUGIN_DIR . '/tracking-for-divi/js/dist',
+				\DigitallStudio\TrackingForDivi\PLUGIN_DIR . 'js/dist',
 				'js/admin/main.ts',
 				array(
 					'handle'       => 'tracking-for-divi-admin',
