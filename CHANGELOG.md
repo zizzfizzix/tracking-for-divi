@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.3...v1.0.4) (2026-02-25)
+
+
+### Bug Fixes
+
+* don't use WP internal constants for directory references ([#20](https://github.com/zizzfizzix/tracking-for-divi/issues/20)) ([02c0208](https://github.com/zizzfizzix/tracking-for-divi/commit/02c0208126b29d9e1ff64b7ec77aced741cf5dcc))
+
 ## [1.0.3](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.2...v1.0.3) (2026-02-16)
 
 
