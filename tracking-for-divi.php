@@ -83,6 +83,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\init_form_submission_handler' );
  */
 function bootstrap_settings() {
 	define( __NAMESPACE__ . '\PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+	define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 	$tracking_for_divi_settings_page = new Admin\SettingsPage();
 	add_action( 'admin_enqueue_scripts', array( $tracking_for_divi_settings_page, 'enqueue_admin_script' ) );
 	add_filter( 'plugin_action_links_' . PLUGIN_BASENAME, array( $tracking_for_divi_settings_page, 'add_settings_link' ) );
