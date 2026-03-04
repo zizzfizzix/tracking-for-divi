@@ -80,3 +80,9 @@ jobs:
             ## Installation
 
             Download `tracking-for-divi.zip` and install via WordPress Admin > Plugins > Add New > Upload Plugin.
+
+      - name: Deploy to WordPress.org
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
