@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.4...v1.1.0) (2026-03-04)
+
+
+### Features
+
+* **ci:** add WP.org deploy to release action ([5fee27e](https://github.com/zizzfizzix/tracking-for-divi/commit/5fee27eb1474520db3f7a1f81fad72eb238fbe0c))
+
 ## [1.0.4](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.3...v1.0.4) (2026-02-25)
 
 
