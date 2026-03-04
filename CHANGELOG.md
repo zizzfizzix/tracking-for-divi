@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.1.0...v1.1.1) (2026-03-04)
+
+
+### Bug Fixes
+
+* **ci:** fenced code blocks not rendered correctly on wp.org ([ab6b365](https://github.com/zizzfizzix/tracking-for-divi/commit/ab6b365fa1f40f4c1a5ff0879192b80ce6fd7fe3))
+
 ## [1.1.0](https://github.com/zizzfizzix/tracking-for-divi/compare/v1.0.4...v1.1.0) (2026-03-04)
 
 
