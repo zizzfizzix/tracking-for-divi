@@ -51,6 +51,10 @@ jobs:
               print; next
             }
 
+            # Handle fenced code blocks: remove fences, indent content with 4 spaces
+            /^```/ { in_fence = !in_fence; next }
+            in_fence { print "    " $0; next }
+
             { print }
           ' README.md > readme.txt
 
