@@ -1,7 +1,7 @@
 name: wp-tracking-for-divi
 services:
   db:
-    image: bitnami/mariadb:latest
+    image: soldevelo/mariadb:latest
     restart: on-failure
     environment:
       MARIADB_USER: wordpress
